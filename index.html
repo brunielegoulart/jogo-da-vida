@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da vida</title>
+</head>
+<body>
+    <div id="two-way-binding">
+        <p v-if="seen">{{ message }}</p>
+        <ol>
+            <todo-item v-for="todo in todos" v-bind:todo="todo" v-bind:key="todo.id"></todo-item>
+        </ol>
+        <input v-model="message" />
+        <button v-on:click="reverseMessage">Inverter Mensagem</button>
+        <button v-on:click="hideMessage"> Clique para esconder</button>
+    </div>
+    
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
